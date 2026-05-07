@@ -85,15 +85,28 @@ body.loading { overflow: hidden; }
   }
 
   .nav-mono {
-    font-family: var(--serif); font-size: 15px; font-weight: 300;
-    letter-spacing: 0.12em; color: var(--navy);
     border: 0.5px solid rgba(26,58,92,0.35);
     width: 38px; height: 38px;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
+    padding: 5px;
   }
+
   .nav-mono:hover { background: var(--navy); color: var(--bg); }
+
+  .nav-mono:hover img {
+  filter: brightness(0) invert(1);
+  }
+
+  .nav-mono img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
 
   .nav-back {
     display: flex; align-items: center; gap: 10px;
@@ -490,7 +503,9 @@ body.loading { overflow: hidden; }
 
 <!-- NAV -->
 <nav>
-  <a class="nav-mono" href="index.html">WL</a>
+  <a class="nav-mono" href="index.html">
+    <img src="monogram.svg" alt="Waverley Lewis">
+  </a>
   <a class="nav-back" href="index.html">
     <span class="back-line"></span>
     All work

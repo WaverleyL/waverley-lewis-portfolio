@@ -83,15 +83,27 @@
   }
 
   .nav-mono {
-    font-family: var(--serif); font-size: 15px; font-weight: 300;
-    letter-spacing: 0.12em; color: var(--navy);
     border: 0.5px solid rgba(26,58,92,0.35);
     width: 38px; height: 38px;
-    display: flex; align-items: center; justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: background 0.3s, color 0.3s;
+    padding: 5px;
   }
   .nav-mono:hover { background: var(--navy); color: var(--bg); }
+
+  .nav-mono:hover img {
+  filter: brightness(0) invert(1);
+  }
+
+  .nav-mono img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
 
   .nav-back {
     display: flex; align-items: center; gap: 10px;
@@ -122,6 +134,28 @@
     gap: 48px;
     align-items: start;
     min-height: 100vh;
+  }
+
+  /* ---  VIEW WEBSITE BUTTON ---*/
+    .project-live-btn {
+    display: inline-block;
+    margin-top: 24px;
+    font-family: var(--sans);
+    font-size: 9.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 11px 26px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+    color: var(--navy);
+    border: 0.5px solid rgba(26,58,92,0.35);
+    background: none;
+  }
+
+  .project-live-btn:hover {
+    background: var(--navy);
+    color: var(--bg);
   }
 
   /* LEFT COLUMN */
@@ -192,6 +226,13 @@
     filter: saturate(0.92);
   }
   .hero-img-wrap:hover img { transform: scale(1.02); }
+
+  .hero-img-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(0.92);
+  }
 
   .hero-img-placeholder {
     width: 100%; aspect-ratio: 16/10;
@@ -488,7 +529,9 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-mono" href="index.html">WL</a>
+  <a class="nav-mono" href="index.html">
+    <img src="monogram.svg" alt="Waverley Lewis">
+  </a>
   <a class="nav-back" href="index.html">
     <span class="back-line"></span>
     All work
@@ -507,12 +550,16 @@
       <li>Web Design</li>
       <li>UX Design</li>
     </ul>
+
+    <a href="https://womenincleantech.framer.website" target="_blank" class="project-live-btn">View live site</a>
   </div>
 
   <!-- CENTER: hero image -->
   <div class="hero-center">
     <div class="hero-img-wrap">
-      <img src="img/womenInCleanTechTitle.png" alt="Women in Clean Tech website home page">
+      <video autoplay muted loop playsinline>
+        <source src="img/womenInCleanTechVideo.mp4" type="video/mp4">
+       </video>
     </div>
     <p class="hero-img-caption">Women in Clean Tech — hero section</p>
   </div>
@@ -570,19 +617,15 @@
     </div>
     <div class="case-section-body">
       <h4>The brief</h4>
-      <p>Replace this with a description of the project brief and background. What was the challenge, who was it for, and what constraints shaped the work from the start? Give enough context that a reader unfamiliar with the project can orient themselves quickly.</p>
-      <p>A second paragraph here can go deeper — the landscape you were designing within, any prior work that existed, or the gap you were trying to close.</p>
-
-      <div class="case-img-wrap">
-        <!-- <img src="img/context-image.png" alt="Context image"> -->
-        <div class="case-img-placeholder">
-          <p class="case-img-placeholder-label">Context image</p>
-        </div>
-      </div>
-      <p class="case-img-caption">Caption describing what this image shows.</p>
+      <p>This project involved designing and developing a new website for Women in Clean Tech SFU, an organization focused on supporting women in sustainability and technology. 
+        The organization previously had an outdated website that was no longer actively used, creating a disconnect between their online presence and the professional, forward-thinking image they wanted to represent.</p>
+      <p>I was responsible for the entire project independently, from research and visual design to prototyping and final development in Framer.</p>
 
       <h4>The problem space</h4>
-      <p>What specific problem were you solving? Try to be concrete — <em>who</em> experiences this, <em>when</em> does it happen, and <em>why</em> does it matter? Avoid vague statements; this is where specificity earns you credibility with hiring managers.</p>
+      <p>Before beginning the redesign, I conducted user testing to better understand how visitors interacted with the existing site. 
+        The majority of participants reported difficulty finding information and stated they would be unlikely to return. 
+        This revealed a clear problem: the organization lacked a cohesive, user-friendly digital space where members and visitors could easily access information about events, initiatives, and contact details. 
+        The redesign became an opportunity not only to modernize the site visually, but also to rebuild the experience around user needs</p>
     </div>
   </div>
 
@@ -594,24 +637,34 @@
     </div>
     <div class="case-section-body">
       <h4>Approach</h4>
-      <p>Describe the design process and strategic decisions you made. What methods did you use — research, ideation, prototyping, testing? What tradeoffs did you navigate? Show that you think, not just that you make.</p>
+      <p>The project began in Figma, where I developed the site structure, layouts, and visual direction before translating the designs into a fully functional website in Framer. 
+        While the organization already had some existing branding elements, the visual identity felt inconsistent and did not fully communicate the clean, modern image associated with the tech industry. 
+        To address this, I refined the existing colour palette and selected sleek sans serif typography to create a more cohesive and contemporary experience.</p>
+
+      <div class="case-img-wrap">
+        <img src="img/womenInCleanTechFigma.png" alt="Home page iterations">
+      </div>
+      <p class="case-img-caption">Home page iterations in Figma</p>
 
       <div class="pullquote">
-        <p>"The insight that reframed everything: replace this with a key design principle or finding that shaped the direction of the work."</p>
+        <p>"One of the biggest lessons from this project was understanding when to preserve existing branding and when to evolve it to better reflect the organization’s goals."</p>
       </div>
 
       <h4>The design decisions</h4>
-      <p>Walk through the key choices you made and why. This is the heart of the case study. Avoid listing everything you did — instead, spotlight two or three decisions that had the most impact and explain the reasoning behind them.</p>
+      <p>Beyond the visual identity, the strategy focused heavily on accessibility, clarity, and navigation. 
+        Using insights from user testing, I organized information into a structure that made events, organization details, and contact information easy to locate. 
+        Every aspect of the site was designed to create a professional and intuitive experience that reflected the organization’s values while improving usability for visitors.</p>
 
       <div class="case-img-wrap">
-        <!-- <img src="img/strategy-image.png" alt="Design process"> -->
-        <div class="case-img-placeholder case-img-placeholder-2">
-          <p class="case-img-placeholder-label">Process / design image</p>
-        </div>
+        <img src="img/womenInCleanTechContact.png" alt="Contact padding-left">
       </div>
-      <p class="case-img-caption">Caption describing what this image shows.</p>
+      <p class="case-img-caption">Contact page.</p>
 
-      <p>Any additional detail about execution, iteration, or collaboration can go here. If you tested with users or got feedback that shaped a revision, this is the place to mention it.</p>
+      <div class="case-img-wrap">
+        <img src="img/womenInCleanTechEvents.png" alt="Contact padding-left">
+      </div>
+      <p class="case-img-caption">Events page.</p>
+
     </div>
   </div>
 
@@ -623,26 +676,30 @@
     </div>
     <div class="case-section-body">
       <h4>What worked</h4>
-      <p>Reflect honestly on the outcome. If there are metrics, results, or feedback you can share, put them here. What did the work achieve, and how do you know?</p>
+      <p>This project strengthened my ability to translate an organization’s goals, values, and identity into a digital experience. 
+        What worked most successfully was the combination of research-driven design and a cohesive visual system, resulting in a platform that felt both modern and functional. 
+        After the redesign, follow-up testing showed significantly improved responses, with users finding information more easily and expressing greater interest in returning to the site. 
+        The executive team was also highly satisfied with the final result.</p>
 
       <ul class="takeaway-list">
         <li>
           <span class="takeaway-num">01</span>
-          <span>Replace this with a specific, concrete outcome or thing that succeeded in the project — ideally something measurable or demonstrable.</span>
+          <span>Improved User Engagement</span>
         </li>
         <li>
           <span class="takeaway-num">02</span>
-          <span>A second win — this could be a process insight, a collaboration success, or a design decision that paid off in testing.</span>
+          <span>Executive Team Satisfaction</span>
         </li>
         <li>
           <span class="takeaway-num">03</span>
-          <span>A third point — perhaps something about how the work was received, or what it unlocked for the team or client.</span>
+          <span>Greater Visibility for the Organization</span>
         </li>
       </ul>
 
       <h4>What I'd do differently</h4>
-      <p>This is where good portfolios separate themselves. Honest reflection — acknowledging constraints, things you'd revisit, or what you'd approach differently with more time — signals maturity and self-awareness. Don't skip this section.</p>
-      <p>End with where this project fits in your larger practice. What did it teach you that you've carried into subsequent work?</p>
+      <p>Working independently across every stage of the project also reinforced my ability to manage an end-to-end design process, from research and concept development to implementation and iteration. 
+        If I were to continue developing the site, I would explore adding more interactive and community-focused features to further strengthen engagement and encourage ongoing participation within the organization. 
+      I would also translate this into HTML, CSS, and JavaScript for greater control over the site.</p>
     </div>
   </div>
 
