@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Women in Clean Tech — Waverley Lewis</title>
+<title>Irena's Garden — Waverley Lewis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet" />
@@ -53,7 +53,8 @@
     transition: transform 0.1s ease; opacity: 0.7;
   }
 
-    /* Loader */
+  
+  /* Loader */
 
   #loader {
   position: fixed;
@@ -92,6 +93,7 @@
     transition: background 0.3s, color 0.3s;
     padding: 5px;
   }
+
   .nav-mono:hover { background: var(--navy); color: var(--bg); }
 
   .nav-mono:hover img {
@@ -104,7 +106,6 @@
     object-fit: contain;
     display: block;
   }
-
   .nav-back {
     display: flex; align-items: center; gap: 10px;
     font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
@@ -134,28 +135,6 @@
     gap: 48px;
     align-items: start;
     min-height: 100vh;
-  }
-
-  /* ---  VIEW WEBSITE BUTTON ---*/
-    .project-live-btn {
-    display: inline-block;
-    margin-top: 24px;
-    font-family: var(--sans);
-    font-size: 9.5px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    font-weight: 400;
-    padding: 11px 26px;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-    color: var(--navy);
-    border: 0.5px solid rgba(26,58,92,0.35);
-    background: none;
-  }
-
-  .project-live-btn:hover {
-    background: var(--navy);
-    color: var(--bg);
   }
 
   /* LEFT COLUMN */
@@ -515,187 +494,6 @@
   @keyframes fadeUp {
     to { opacity: 1; transform: translateY(0); }
   }
-
-  /* ── MOBILE RESPONSIVE ────────────────────────────────────── */
-  @media (max-width: 1000px) {
-    .project-hero {
-      padding: 90px 32px 40px;
-      grid-template-columns: 1fr;
-      gap: 32px;
-      min-height: auto;
-    }
-
-    .hero-left   { order: 1; position: static; padding-top: 0; }
-    .hero-center { order: 2; }
-    .hero-right  { order: 3; position: static; }
-
-    .hero-title, .hero-numeral, .left-rule,
-    .category-list, .hero-center, .hero-right {
-      animation: none;
-      opacity: 1;
-      transform: none;
-    }
-
-    .info-panel-corners { display: none; }
-
-    .info-panel {
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-flow: row;
-      gap: 20px;
-      align-items: start;
-      align-content: start;
-    }
-
-    .info-section {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-  .case-section-label {
-    position: static;
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    border-bottom: 0.5px solid var(--bg);
-    padding-bottom: 16px;
-  }
-
-  .case-section-numeral { margin-bottom: 0; }
-  .case-section-title { font-size: 20px; }
-
-  .case-section {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  }
-  
-  @media (max-width: 768px) {
-
-    .cursor-dot { display: none; }
-
-    nav {
-      padding: 18px 24px;
-    }
-    .nav-back {
-      font-size: 9px;
-      letter-spacing: 0.14em;
-    }
-
-    /* HERO — collapse three columns to single column */
-    .project-hero {
-      padding: 90px 24px 40px;
-      grid-template-columns: 1fr;
-      gap: 32px;
-      min-height: auto;
-    }
-
-    .hero-left   { order: 1; position: static; padding-top: 0; }
-    .hero-center { order: 2; }
-    .hero-right  { order: 3; position: static; }
-
-    /* disable entry animations on mobile so content is immediately visible */
-    .hero-title, .hero-numeral, .left-rule,
-    .category-list, .hero-center, .hero-right {
-      animation: none;
-      opacity: 1;
-      transform: none;
-    }
-
-    .hero-title {
-      font-size: clamp(28px, 7vw, 36px);
-    }
-
-    /* info panel — 2-col grid */
-    .info-panel {
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-flow: row;
-      gap: 20px;
-      align-items: start;
-      align-content: start; 
-    }
-
-    .info-panel-corners {
-      display: none;
-    }
-
-    .info-section {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .section-rule {
-      margin: 40px 0 0;
-    }
-
-    /* CASE STUDY SECTIONS */
-    .case-sections {
-      padding: 0 24px 80px;
-    }
-
-    .case-section {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 48px 0;
-    }
-
-    .case-section-label {
-      position: static;
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-      border-bottom: 0.5px solid var(--bg);
-      padding-bottom: 16px;
-    }
-
-    .case-section-numeral { margin-bottom: 0; }
-    .case-section-title { font-size: 20px; }
-
-    .pullquote {
-      padding: 20px;
-      margin: 24px 0;
-    }
-    .pullquote p { font-size: 17px; }
-
-    /* PROJECT FOOTER */
-    .project-footer {
-      padding: 40px 24px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 28px;
-    }
-    .pf-next { font-size: 22px; }
-  }
-
-  @media (max-width: 480px) {
-    nav { padding: 16px 20px; }
-    .project-hero { padding: 80px 20px 32px; }
-    .case-sections { padding: 0 20px 64px; }
-    .project-footer { padding: 36px 20px; }
-
-    .info-panel { 
-      grid-template-columns: 1fr; 
-      gap: 0;
-    }
-
-    .info-section {
-    padding-bottom: 16px;
-    margin-bottom: 16px;
-    border-bottom: 0.5px solid var(--rule);
-  }
-
-    .info-section:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-  }
 </style>
 </head>
 <body>
@@ -725,24 +523,23 @@
   <!-- LEFT: title + categories -->
   <div class="hero-left">
     <p class="hero-numeral">II</p>
-    <h1 class="hero-title"><em>Women</em> in Clean Tech</h1>
+    <h1 class="hero-title"><em>Irena's</em> Garden</h1>
     <div class="left-rule"></div>
     <ul class="category-list">
-      <li>Web Design</li>
-      <li>UX Design</li>
+      <li>Game Design</li>
+      <li>Interaction Design</li>
+      <li>Visual Design</li>
     </ul>
-
-    <a href="https://womenincleantech.framer.website" target="_blank" class="project-live-btn">View live site</a>
   </div>
 
   <!-- CENTER: hero image -->
   <div class="hero-center">
     <div class="hero-img-wrap">
       <video autoplay muted loop playsinline>
-        <source src="img/womenInCleanTechVideo.mp4" type="video/mp4">
+        <source src="img/irenasGardenVideo.mp4" type="video/mp4">
        </video>
     </div>
-    <p class="hero-img-caption">Women in Clean Tech — home page</p>
+    <p class="hero-img-caption">Irena's Garden — first level walkthrough</p>
   </div>
 
   <!-- RIGHT: info panel -->
@@ -753,7 +550,7 @@
       <div class="info-section">
         <p class="info-label">Timeline</p>
         <ul class="info-items">
-          <li>Apr 2026</li>
+          <li>Mar – Apr 2025</li>
           <li>3 weeks</li>
         </ul>
       </div>
@@ -761,7 +558,7 @@
       <div class="info-section">
         <p class="info-label">My Role</p>
         <ul class="info-items">
-          <li>UX Designer</li>
+          <li>Game Designer</li>
           <li>Visual Designer</li>
         </ul>
       </div>
@@ -776,8 +573,9 @@
       <div class="info-section">
         <p class="info-label">Tools</p>
         <ul class="info-items">
-          <li>Figma</li>
-          <li>Framer</li>
+          <li>Processing</li>
+          <li>Procreate</li>
+          <li>Adobe Illustrator</li>
         </ul>
       </div>
     </div>
@@ -798,15 +596,18 @@
     </div>
     <div class="case-section-body">
       <h4>The brief</h4>
-      <p>This project involved designing and developing a new website for Women in Clean Tech SFU, an organization focused on supporting women in sustainability and technology. 
-        The organization previously had an outdated website that was no longer actively used, creating a disconnect between their online presence and the professional, forward-thinking image they wanted to represent.</p>
-      <p>I was responsible for the entire project independently, from research and visual design to prototyping and final development in Framer.</p>
+      <p>This project was developed for a game design class to demonstrate understanding of game mechanics, visual communication, interaction flow, and user engagement. 
+        The assignment required designing a small but complete game using Processing that included a clear concept, visual identity, interactive mechanics, and a progression system.</p>
+
+      <div class="case-img-wrap">
+        <img src="img/irenasGardenTitle.png" alt="Irena's Garden Title Screen">
+      </div>
+      <p class="case-img-caption">Title Screen</p>
 
       <h4>The problem space</h4>
-      <p>Before beginning the redesign, I conducted user testing to better understand how visitors interacted with the existing site. 
-        The majority of participants reported difficulty finding information and stated they would be unlikely to return. 
-        This revealed a clear problem: the organization lacked a cohesive, user-friendly digital space where members and visitors could easily access information about events, initiatives, and contact details. 
-        The redesign became an opportunity not only to modernize the site visually, but also to rebuild the experience around user needs</p>
+      <p>I wanted to create an experience that felt calm and emotionally engaging, rather than fast-paced or competitive, leading to the concept of Irena’s Garden, loosely based on my own childhood memories in my grandmother's garden.</p>
+      <p>The game follows a young girl restoring an abandoned garden once cared for by her late grandmother. As players complete planting puzzles, they slowly uncover fragments of childhood memories tied to the space. 
+        The project explored how storytelling could be woven into gameplay mechanics, using progression and interaction not just as challenges, but as a way of revealing emotion, memory, and connection.</p>
     </div>
   </div>
 
@@ -818,34 +619,32 @@
     </div>
     <div class="case-section-body">
       <h4>Approach</h4>
-      <p>The project began in Figma, where I developed the site structure, layouts, and visual direction before translating the designs into a fully functional website in Framer. 
-        While the organization already had some existing branding elements, the visual identity felt inconsistent and did not fully communicate the clean, modern image associated with the tech industry. 
-        To address this, I refined the existing colour palette and selected sleek sans serif typography to create a more cohesive and contemporary experience.</p>
-
+      <p>With these initial ideas in place I was able to create a UML diagram to layout the project and act as a first iteration of the game.
+      In Processing, I worked to implement the movement, planting, watering, and resource mechanics. 
+      I also created adjacency and placement rules for puzzles and built a progression system where each area unlocks after completing a planting challenge. 
+      I encountered a few difficulties along the way where I needed to revise my code structure or create additional code elements which differed from the structure of my initial diagram.</p>
+      
       <div class="case-img-wrap">
-        <img src="img/womenInCleanTechFigma.png" alt="Home page iterations">
+        <img src="img/irenasGardenUML.jpg" alt="Irena's Garden Title UML Diagram">
       </div>
-      <p class="case-img-caption">Home page iterations in Figma</p>
+      <p class="case-img-caption">UML Diagram created in initial project planning</p>
 
-      <div class="pullquote">
-        <p>"One of the biggest lessons from this project was understanding when to preserve existing branding and when to evolve it to better reflect the organization’s goals."</p>
-      </div>
+      
 
       <h4>The design decisions</h4>
-      <p>Beyond the visual identity, the strategy focused heavily on accessibility, clarity, and navigation. 
-        Using insights from user testing, I organized information into a structure that made events, organization details, and contact information easy to locate. 
-        Every aspect of the site was designed to create a professional and intuitive experience that reflected the organization’s values while improving usability for visitors.</p>
+      <p>Visually, I wanted the game to feel soft and storybook-like, so I created original backgrounds, sprites, and interface elements using a pastel colour palette and hand-crafted assets in both Adobe Illustrator and Procreate.</p>
 
       <div class="case-img-wrap">
-        <img src="img/womenInCleanTechContact.png" alt="Contact padding-left">
+        <img src="img/irenasGardenFruit.png" alt="Player catching fruit">
       </div>
-      <p class="case-img-caption">Contact page.</p>
+      <p class="case-img-caption">Player catching fruit to gain energy</p>
 
-      <div class="case-img-wrap">
-        <img src="img/womenInCleanTechEvents.png" alt="Contact padding-left">
+      <div class="pullquote">
+        <p>"One of the biggest lessons from this project was learning how to balance challenge and calmness to create an experience that felt both engaging and reflective."</p>
       </div>
-      <p class="case-img-caption">Events page.</p>
 
+      <p>User testing played an important role in refining the experience. This led to adjustments in wait times to maintain player engagement, like reduced time for plant growth as well as increasing the frequency which fruit spawns so players can plant more without running out of energy.
+         Overall, this improved the flow of gameplay and reduced chances of potential boredom while playing.</p>
     </div>
   </div>
 
@@ -857,30 +656,17 @@
     </div>
     <div class="case-section-body">
       <h4>What worked</h4>
-      <p>This project strengthened my ability to translate an organization’s goals, values, and identity into a digital experience. 
-        What worked most successfully was the combination of research-driven design and a cohesive visual system, resulting in a platform that felt both modern and functional. 
-        After the redesign, follow-up testing showed significantly improved responses, with users finding information more easily and expressing greater interest in returning to the site. 
-        The executive team was also highly satisfied with the final result.</p>
-
-      <ul class="takeaway-list">
-        <li>
-          <span class="takeaway-num">01</span>
-          <span>Improved User Engagement</span>
-        </li>
-        <li>
-          <span class="takeaway-num">02</span>
-          <span>Executive Team Satisfaction</span>
-        </li>
-        <li>
-          <span class="takeaway-num">03</span>
-          <span>Greater Visibility for the Organization</span>
-        </li>
-      </ul>
+      <p>This project brought together storytelling, interaction design, visual design, and programming into one cohesive experience. 
+        What worked most successfully was the balance between gameplay and narrative, where mechanics became part of the storytelling 
+        itself rather than feeling separate from it. The project strengthened my ability to design systems that communicate mood, emotion, 
+        and progression through interaction.</p>
 
       <h4>What I would do differently</h4>
-      <p>Working independently across every stage of the project also reinforced my ability to manage an end-to-end design process, from research and concept development to implementation and iteration. 
-        If I were to continue developing the site, I would explore adding more interactive and community-focused features to further strengthen engagement and encourage ongoing participation within the organization. 
-      I would also translate this into HTML, CSS, and JavaScript for greater control over the site.</p>
+      <p>If I were to continue developing the game, I would expand player freedom within the gardening mechanics and conduct more extensive 
+        playtesting to refine pacing and difficulty. I would also explore ways to deepen the environmental storytelling, allowing players to 
+        uncover memories and narrative details in more dynamic and interactive ways</p>
+      <p>Overall, this project taught me several essential skills in the importance of user testing  and creating an engaging, narrative-driven 
+        experience that have become staples in my design practice.</p>
     </div>
   </div>
 
@@ -890,8 +676,8 @@
 <div class="project-footer">
   <div class="pf-left">
     <p class="pf-label">Next project</p>
-    <a href="irenas-garden.html" class="pf-next">
-      Irena's Garden
+    <a href="medication-reminder-app.html" class="pf-next">
+      Medication Reminder App
       <span class="pf-arrow"></span>
     </a>
   </div>
